@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Commonplace",
   description:
-    "Preserve your family's stories. Guided prompts, AI-powered memoir chapters, and a living record of the people you love.",
+    "Your parents have a lifetime of stories. Commonplace sends them a text, they reply, and their answers become beautifully written memoir chapters — in their voice, for your family, forever.",
 };
 
 export default function RootLayout({
