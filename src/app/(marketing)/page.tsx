@@ -1,32 +1,9 @@
 import Link from "next/link";
-import { Show, SignInButton, UserButton } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-stone-50">
-      {/* Nav */}
-      <nav className="flex items-center justify-between px-8 py-6 max-w-6xl mx-auto">
-        <span className="text-xl font-serif font-bold tracking-tight text-stone-900">
-          Commonplace
-        </span>
-        <div className="flex items-center gap-4">
-          <Show when="signed-out">
-            <SignInButton>
-              <Button variant="ghost" size="sm">
-                Sign in
-              </Button>
-            </SignInButton>
-          </Show>
-          <Show when="signed-in">
-            <Link href="/dashboard" className="text-sm text-stone-600 hover:text-stone-900 mr-2">
-              Dashboard
-            </Link>
-            <UserButton />
-          </Show>
-        </div>
-      </nav>
-
+    <>
       {/* Hero — Character + Problem */}
       <section className="max-w-3xl mx-auto px-8 pt-20 pb-16 text-center">
         <h1 className="text-5xl font-serif font-bold text-stone-900 leading-tight mb-6">
@@ -264,13 +241,6 @@ export default function LandingPage() {
           $1 to start. Takes 2 minutes. They&apos;ll get their first text today.
         </p>
       </section>
-
-      {/* Footer */}
-      <footer className="border-t border-stone-200 py-8">
-        <div className="max-w-6xl mx-auto px-8 text-center text-sm text-stone-500">
-          <p>Commonplace &middot; Their stories, in their words, for your family.</p>
-        </div>
-      </footer>
-    </div>
+    </>
   );
 }
